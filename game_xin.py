@@ -20,7 +20,7 @@ if st.button("帮我决定"):
 # 嵌入 Bilibili 网站
 st.header("快乐一下")
 url = "https://www.bilibili.com"
-iframe = f'<iframe src="{url}" width="300%" height="300" style="border:none;"></iframe>'
+iframe = f'<iframe src="{url}" width="100%" height="800" style="border:none;"></iframe>'
 components.html(iframe)
 
 # 其他个性化信息或功能可以在这里添加
