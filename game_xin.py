@@ -6,11 +6,11 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="芯芯的决策助手", page_icon=":tada:", layout="wide")
 
 # 添加标题和欢迎信息
-st.title("欢迎来到芯芯的决策助手--狗狗")
+st.title("欢迎来到芯芯的决策助手")
 st.subheader("让我们一起做出选择吧！")
 
 # 决策助手部分
-st.header("决策助狗")
+st.header("决策助手")
 options = st.text_area("输入你的选项，每行一个")
 if st.button("帮我决定"):
     choices = options.split("\n")
@@ -23,7 +23,7 @@ if st.button("帮我决定"):
 import streamlit as st
 
 # 创建侧边栏
-st.sidebar.title("简易计算器")
+st.sidebar.title("芯芯简易计算器")
 
 # 计算器输入
 num1 = st.sidebar.number_input("输入第一个数", value=0.0)
