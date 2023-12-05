@@ -17,10 +17,28 @@ if st.button("帮我决定"):
     choice = random.choice(choices)
     st.success(f"芯芯，你应该选择：{choice}")
 
-# 嵌入 Bilibili 网站
-st.header("快乐一下")
-url = "https://www.bilibili.com"
-iframe = f'<iframe src="{url}" width="100%" height="800" style="border:none;"></iframe>'
-components.html(iframe)
+
 
 # 其他个性化信息或功能可以在这里添加
+import streamlit as st
+
+# 创建侧边栏
+st.sidebar.title("简易计算器")
+
+# 计算器输入
+num1 = st.sidebar.number_input("输入第一个数", value=0.0)
+num2 = st.sidebar.number_input("输入第二个数", value=0.0)
+operation = st.sidebar.selectbox("选择运算符", ["+", "-", "*", "/"])
+
+# 计算结果
+if st.sidebar.button("计算"):
+    if operation == "+":
+        result = num1 + num2
+    elif operation == "-":
+        result = num1 - num2
+    elif operation == "*":
+        result = num1 * num2
+    elif operation == "/":
+        result = num1 / num2 if num2 != 0 else "除数不能为零"
+    
+    st.sidebar.write("结果:", result)
